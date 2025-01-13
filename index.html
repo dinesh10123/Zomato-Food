@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-section">
+          <!-- Hamburger Menu Button (visible on mobile) -->
+          <div class="hamburger-menu">
+            <button class="menu-toggle" aria-label="Toggle menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+
+          <!-- Side Navigation Menu -->
+          <div class="side-nav">
+            <div class="side-nav-content">
+              <button class="close-menu" aria-label="Close menu">
+                &times;
+              </button>
+              <div class="side-nav-buttons">
+                <button id="log_in" class="header_buttons">Log in</button>
+                <button id="sign_up" class="header_buttons">Sign up</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overlay for when menu is open -->
+          <div class="nav-overlay"></div>
+
+          <!-- Zomato Logo (moved to the right) -->
+          <div class="Box" id="logo-container">
+            <img
+              src="./assets/images/header/logo.avif"
+              alt="zomato logo"
+              id="zomato_logo"
+            />
+          </div>
+
+          <!-- Search Section -->
+          <div class="search">
+            <div class="Box">
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: #ff7e8b; font-size: 20px"
+              ></i>
+              <select name="select_location" id="select_location">
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+              </select>
+            </div>
+            <div class="Box" id="space"><p>|</p></div>
+            <div class="Box"><i class="fas fa-search search-icon"></i></div>
+            <div class="Box">
+              <div id="search_dishes">
+                <input
+                  type="text"
+                  placeholder="search for restaurant, cuisine or a dish"
+                  id="search_dishes"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Login/Signup (hidden on mobile) -->
+          <div class="desktop-nav">
+            <div class="Box">
+              <button id="desktop_log_in" class="header_buttons login-signup">
+                Log in
+              </button>
+            </div>
+            <div class="Box">
+              <button id="desktop_sign_up" class="header_buttons login-signup">
+                Sign up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- navigation -->
+        <div class="navigation">
+          <!-- Dining Out Button -->
+          <button class="header_buttons">
+            <div class="nav nav_top" id="nav_top">
+              <div class="nav img_divs" id="spoon">
+                <img
+                  src="./assets/images/header/spoon_plate.avif"
+                  alt="zomato dining out logo"
+                  class="nav_image"
+                />
+              </div>
+              <div class="nav nav_text">Dining Out</div>
+            </div>
+          </button>
+          <!-- Delivery Button -->
+          <button class="header_buttons">
+            <div class="nav" id="nav-middle">
+              <div class="nav img_divs" id="scooter">
+                <img
+                  src="./assets/images/header/delivery_scooter.webp"
+                  alt="zomato Delivery scooter logo"
+                  class="nav_image"
+                />
+              </div>
+              <div class="nav nav_text">Delivery</div>
+            </div>
+          </button>
+          <!-- Night Life Button -->
+          <button class="header_buttons">
+            <div class="nav" id="nav-bottom">
+              <div class="nav img_divs" id="nightlife">
+                <img
+                  src="./assets/images/header/night_life.webp"
+                  alt="zomato nightlife logo"
+                  class="nav_image"
+                />
+              </div>
+              <div class="nav nav_text">Nightlife</div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="collections-section">
+        <div id="Collection">Collections</div>
+        <div id="Collection_para">
+          <p>
+            Explore curated lists of top restaurants, cafes, pubs, and bars in
+            Bengaluru, based on trends
+          </p>
+          <p id="Collection_para_2">All collections in Bengaluru ></p>
+        </div>
+
+        <div class="header_images">
+          <div class="slider-container">
+            <!-- Image 1 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810207.png?output-format=webp"
+                  alt="Top Trending Spots"
+                />
+                <div class="text1">Top Trending Spots</div>
+                <div class="text2">24 Places</div>
+              </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/2b9361aa328a43b08986f77bbec280bd_1709810493.png?output-format=webp"
+                  alt="Best Rooftop Places"
+                />
+                <div class="text1">Best Rooftop Places</div>
+                <div class="text2">42 Places</div>
+              </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/6922d49fb675d0490edb652abf5ca45f_1727171292.png?output-format=webp"
+                  alt="Newly Opened Places"
+                />
+                <div class="text1">Newly Opened Places</div>
+                <div class="text2">31 Places</div>
+              </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/2e8b954961d07f927802853d5944d67b_1709812883.png?output-format=webp"
+                  alt="It's a Date"
+                />
+                <div class="text1">It's a Date</div>
+                <div class="text2">24 Places</div>
+              </div>
+            </div>
+            <!-- Image 5 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/bb911f91fcd0049494b664752d28b740_1733211787.png?output-format=webp"
+                  alt="Strawberry Sweet Treats"
+                />
+                <div class="text1">Strawberry Sweet Treats</div>
+                <div class="text2">10 Places</div>
+              </div>
+            </div>
+            <!-- Image 6 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/a5e6d123ac773de6d33250da4bb3b93f_1731309686.png?output-format=webp"
+                  alt="Best Insta-worthy Places"
+                />
+                <div class="text1">Best Insta-worthy Places</div>
+                <div class="text2">13 Places</div>
+              </div>
+            </div>
+            <!-- Image 7 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/088c7eea7df002b1fef0c1d257935be4_1709812426.png?output-format=webp"
+                  alt="Best Luxury Dining Places"
+                />
+                <div class="text1">Best Luxury Dining Places</div>
+                <div class="text2">27 Places</div>
+              </div>
+            </div>
+            <!-- Image 8 -->
+            <div class="Box">
+              <div class="images">
+                <img
+                  src="https://b.zmtcdn.com/data/collections/dbfb118fb614c663b22373f49db73085_1729509104.png?output-format=webp"
+                  alt="Asian Restaurants"
+                />
+                <div class="text1">Asian Restaurants</div>
+                <div class="text2">21 Places</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-arrows">
+            <button class="arrow-btn prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="arrow-btn next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="filter-container">
+        <button class="filter-btn" id="filter">
+          <i class="fa fa-sliders-h"></i> Filters
+        </button>
+        <button class="filter-btn" id="offers">Offers</button>
+        <button class="filter-btn" id="rating">Rating: 4.5+</button>
+        <button class="filter-btn" id="alcohol">Serves Alcohol</button>
+        <button class="filter-btn" id="open">Open Now</button>
+      </div>
+      <div id="filterPopUp" class="hidden">
+        <h3>Choose Filter</h3>
+        <div class="filter-option">
+          <input
+            type="radio"
+            id="sort-by-rating"
+            name="filter-option"
+            value="rating"
+          />
+          <label for="sort-by-rating">Sort By Rating</label>
+        </div>
+        <div class="filter-option">
+          <input
+            type="radio"
+            id="sort-high-to-low"
+            name="filter-option"
+            value="highLow"
+          />
+          <label for="sort-high-to-low">High to Low (Price)</label>
+        </div>
+        <div class="filter-option">
+          <input
+            type="radio"
+            id="cost-option"
+            name="filter-option"
+            value="costLow"
+          />
+          <label for="cost-option">Cost: Low to High</label>
+        </div>
+        <div class="filter-option">
+          <input
+            type="radio"
+            id="distance-option"
+            name="filter-option"
+            value="distance"
+          />
+          <label for="distance-option">Distance</label>
+        </div>
+        <button id="apply-filter">Apply</button>
+        <button id="close-filter">Close</button>
+      </div>
+      <div id="banner">
+        <img
+          src="https://b.zmtcdn.com/data/o2_assets/e067a1cf0d3fe27b366402b98b994e9f1716296909.png"
+          alt=""
+        />
+      </div>
+      <div id="Bengaluru">Bengaluru Restaurants</div>
+      <!-- Card Container -->
+      <div id="card-container"></div>
+    </main>
+  </body>
+</html>
